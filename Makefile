@@ -6,7 +6,7 @@
 #    By: gadoglio <gadoglio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/10 19:41:24 by gadoglio          #+#    #+#              #
-#    Updated: 2021/05/11 20:48:29 by gadoglio         ###   ########.fr        #
+#    Updated: 2021/05/12 20:29:55 by gadoglio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC		=	nasm
 FLAGS	=	-f elf64
 
 SRCS	=	ft_strlen.s ft_read.s ft_write.s ft_strcpy.s \
-			ft_strcmp.s
+			ft_strcmp.s ft_strdup.s
 
 OBJS	=	$(patsubst %.s, %.o, ${SRCS}) 
 

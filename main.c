@@ -6,7 +6,7 @@
 /*   By: gadoglio <gadoglio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 20:01:13 by gadoglio          #+#    #+#             */
-/*   Updated: 2021/05/11 20:54:15 by gadoglio         ###   ########.fr       */
+/*   Updated: 2021/05/12 20:31:04 by gadoglio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,23 @@ int			ft_strcmp_t(char *s1, char *s2)
 	return (1);
 }
 
+int			ft_strdup_t(char *str)
+{
+	char	*s1;
+	char	*s2;
+
+	s1 = ft_strdup(str);
+	s2 = strdup(str);
+	printf("strdup : \"%s\" / ft_strdup : \"%s\"\n", s2, s1);
+	if (!strcmp(s1, s2))
+		printf("[OK]\n");
+	else
+		printf("[KO]\n");
+	free(s1);
+	free(s2);
+	return (1);
+}
+
 int		main(void)
 {
 	int	ft;
@@ -153,6 +170,17 @@ int		main(void)
 	ft_strcmp_t("Hellow\0 World!", " crazy");
 	printf("\n\n");
 
+	/*
+	** ft_strdup
+	*/
+	printf("%s", "ft_strdup.s\n");
+	ft_strdup_t("Hellow World!");
+	ft_strdup_t("42");
+	ft_strdup_t("    ");
+	ft_strdup_t("");
+	ft_strdup_t("Hellow \tworld!");
+	ft_strdup_t("Hellow\0World");
+	printf("\n\n");
 
 	return (0);
 }
